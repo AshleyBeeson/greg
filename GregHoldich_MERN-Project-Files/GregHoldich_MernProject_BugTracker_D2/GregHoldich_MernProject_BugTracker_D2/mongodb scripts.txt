@@ -1,0 +1,15 @@
+use bugtracker
+db.createCollection('bugs')
+db.createUser(
+   {
+     user: "bugtracker-admin",
+     pwd: "f28KA7c21jdH3Ja5Kd",
+     roles: [
+		{ 
+			role:"dbAdmin",
+			db:"bugtracker"
+		},
+			"readWrite"
+		]
+   }
+)
